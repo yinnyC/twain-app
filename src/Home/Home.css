@@ -1,0 +1,22 @@
+/*  src/Home/Home.css  */
+
+.Home {
+	position: relative;
+}
+.Home .jum {
+	background-image: url('https://i1.wp.com/abovewhispers.com/wp-content/uploads/2016/06/love-couple-beach-hd-wallpapers-cool-desktop-backgrounds-widescreen.jpg?w=1600');
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+
+.anniversary {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 40px;
+}
+
+.buttons {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}

@@ -1,0 +1,16 @@
+/*  src/Album/AlbumBook.css  */
+
+.AlbumBook .anBook {
+	border: none;
+	position: relative;
+}
+.AlbumBook-Title {
+	text-align: left;
+}
+
+.AlbumBook-Detail {
+	text-align: right;
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+}

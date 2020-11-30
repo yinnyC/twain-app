@@ -1,3 +1,3 @@
-# TWAIN app for couple
+# TWAIN app
 
 spd1-2 assignment
