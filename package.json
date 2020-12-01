@@ -1,4 +1,5 @@
 {
+  "homepage": "https://yinnyc.github.io/twain-app",
   "name": "app",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "start-flask-api": "cd api && venv/bin/flask run",
     "build": "react-scripts build",
@@ -41,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:5000/"
+  "proxy": "http://127.0.0.1:5000/",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
