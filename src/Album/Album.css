@@ -6,6 +6,13 @@
 	margin: auto;
 	padding: 2em;
 }
+
+.Add-button {
+	margin-top: 2em;
+	margin-right: 2em;
+	display: flex;
+	justify-content: flex-end;
+}
 /* Smaller screens and tablets */
 @media only screen and (max-width: 960px) {
 	.AlbumBooks {

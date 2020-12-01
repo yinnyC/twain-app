@@ -1,0 +1,11 @@
+/*  src/Plan/Plan.css  */
+
+.Plan-board {
+	position: relative;
+}
+
+.Plan-board .Add-Button {
+	margin: 2em;
+	display: flex;
+	justify-content: flex-end;
+}

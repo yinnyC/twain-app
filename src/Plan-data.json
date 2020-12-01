@@ -1,0 +1,105 @@
+[
+  {
+     "id":1,
+     "title":"Trip to Ohio",
+     "category":"Travel",
+     "desc":"",
+     "date":"12 Dec,2020",
+     "status":"complete"
+  },
+  {
+   "id":2,
+   "title":"Buy Switch",
+   "category":"Shopping",
+   "desc":"saved up 20%",
+   "date":"1 Jan,2021",
+   "status":"complete"
+},
+{
+   "id":3,
+   "title":"Trip to Napa",
+   "category":"Travel",
+   "desc":"Castello di Amorosa",
+   "date":"14 Feb,2021",
+   "status":"in-progress"
+},
+{
+   "id":4,
+   "title":"Trip to Bungalows key largo",
+   "category":"Travel",
+   "desc":"",
+   "date":"14 Mar,2021",
+   "status":"in-progress"
+},
+{
+   "id":5,
+   "title":"Setup A Youtube Chennel",
+   "category":"Career",
+   "desc":"Nerds do nerdy stuff",
+   "date":"20 Mar,2021",
+   "status":"in-progress"
+},
+{
+   "id":6,
+   "title":"Film Raspberry Pi Vlog",
+   "category":"Career",
+   "desc":"Smart Home setup",
+   "date":"2 April,2021",
+   "status":"backlog"
+},
+{
+   "id":7,
+   "title":"Set Up Instagram Account",
+   "category":"Career",
+   "desc":"Tech/Travel",
+   "date":"5 April,2021",
+   "status":"in-progress"
+},
+{
+   "id":8,
+   "title":"Film Baking with Raspberry pi Vlog",
+   "category":"Career",
+   "desc":"",
+   "date":"12 April,2021",
+   "status":"backlog"
+},
+{
+   "id":9,
+   "title":"Adopt a cat",
+   "category":"Other",
+   "desc":"",
+   "date":"15 May,2022",
+   "status":"in-progress"
+},
+{
+   "id":10,
+   "title":"Film a BrewingPi Vlog",
+   "category":"Career",
+   "desc":"",
+   "date":"30 May,2021",
+   "status":"backlog"
+},
+{
+   "id":11,
+   "title":"Trip to Lake Tahoe",
+   "category":"Travel",
+   "desc":"",
+   "date":"15 June,2021",
+   "status":"backlog"
+},
+{
+   "id":12,
+   "title":"Trip to Santa Cruz",
+   "category":"Travel",
+   "date":"30 July,2021",
+   "status":"backlog"
+},
+{
+   "id":13,
+   "title":"Buy a 2bd house",
+   "category":"Career",
+   "date":"12 Dec,2023",
+   "status":"backlog"
+}
+  
+]

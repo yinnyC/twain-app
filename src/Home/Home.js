@@ -1,5 +1,6 @@
 import React from 'react';
-import { Jumbotron,Button } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
+import ChangePhoto from './ChangePhoto';
 import './Home.css';
 function Home() { 
   return (
@@ -10,7 +11,7 @@ function Home() {
         <p>486 days since</p>
         </div>
       <div className="buttons">
-        <Button variant="primary">Change picture</Button>
+        <ChangePhoto />
       </div>
     </Jumbotron>
     </div>
