@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/twain-app/static/css/main.e044a646.chunk.css",
+    "main.js": "/twain-app/static/js/main.caec4971.chunk.js",
+    "main.js.map": "/twain-app/static/js/main.caec4971.chunk.js.map",
+    "runtime-main.js": "/twain-app/static/js/runtime-main.f70a2117.js",
+    "runtime-main.js.map": "/twain-app/static/js/runtime-main.f70a2117.js.map",
+    "static/css/2.a4524048.chunk.css": "/twain-app/static/css/2.a4524048.chunk.css",
+    "static/js/2.857b72f0.chunk.js": "/twain-app/static/js/2.857b72f0.chunk.js",
+    "static/js/2.857b72f0.chunk.js.map": "/twain-app/static/js/2.857b72f0.chunk.js.map",
+    "static/js/3.a7af0afc.chunk.js": "/twain-app/static/js/3.a7af0afc.chunk.js",
+    "static/js/3.a7af0afc.chunk.js.map": "/twain-app/static/js/3.a7af0afc.chunk.js.map",
+    "index.html": "/twain-app/index.html",
+    "static/css/2.a4524048.chunk.css.map": "/twain-app/static/css/2.a4524048.chunk.css.map",
+    "static/css/main.e044a646.chunk.css.map": "/twain-app/static/css/main.e044a646.chunk.css.map",
+    "static/js/2.857b72f0.chunk.js.LICENSE.txt": "/twain-app/static/js/2.857b72f0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f70a2117.js",
+    "static/css/2.a4524048.chunk.css",
+    "static/js/2.857b72f0.chunk.js",
+    "static/css/main.e044a646.chunk.css",
+    "static/js/main.caec4971.chunk.js"
+  ]
+}
