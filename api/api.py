@@ -1,25 +1,14 @@
-from flask import Flask
+from flask_cors import CORS
+from flask import Flask, request
+from routes import indexRoute, createRoute
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'blah'
-socketio = SocketIO(app, cors_allowed_origins='*')
+CORS(app)
 
-
-@socketio.on('message')
-def handle_message(message):
-    print('received message: ' + message)
-    send(message, broadcast=True)
-
-
-@app.route('/api', methods=['GET'])
-def api():
-    return{
-        'userId': 1,
-        'title': 'Flask React Application',
-        'completed': False
-    }
+# Register the blueprints
+app.register_blueprint(indexRoute)
+app.register_blueprint(createRoute)
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    socketio.run(app)
+    app.run(debug=True)

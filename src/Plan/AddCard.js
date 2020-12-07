@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Button,Modal,Form } from 'react-bootstrap';
 
+
 function AddCard() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -8,11 +9,11 @@ function AddCard() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>+</Button>
+      <Button className="AddButton" size="lg" variant="secondary" onClick={handleShow}>+</Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add New Plan</Modal.Title>
+          <Modal.Title>New Plan</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Form>

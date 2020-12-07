@@ -30,20 +30,23 @@ class Plan extends Component {
 
   render() {
     return (
-      <div className="Plan-board mt-5">
-        <div className="Add-Button">
-          <AddCard/>
-        </div>
-        <div className="container-fluid Swimlanes">
-          <div className="row">
-            <div className="col-md-4">
-              {this.renderSwimlane('Backlog', this.state.plans.backlog, this.swimlanes.backlog)}
-            </div>
-            <div className="col-md-4">
-              {this.renderSwimlane('In Progress', this.state.plans.inProgress, this.swimlanes.inProgress)}
-            </div>
-            <div className="col-md-4">
-              {this.renderSwimlane('Complete', this.state.plans.complete, this.swimlanes.complete)}
+      <div className="Plan-board">
+        <div className="col-md-11 mr-auto ml-auto">
+          <div className="Add-Button">
+            <p className="Greeting">Got a new plan?</p>
+            <AddCard/>
+          </div>
+          <div className="Swimlanes">
+            <div className="row">
+              <div className="col-md-4">
+                {this.renderSwimlane('Backlog', this.state.plans.backlog, this.swimlanes.backlog)}
+              </div>
+              <div className="col-md-4">
+                {this.renderSwimlane('In Progress', this.state.plans.inProgress, this.swimlanes.inProgress)}
+              </div>
+              <div className="col-md-4">
+                {this.renderSwimlane('Complete', this.state.plans.complete, this.swimlanes.complete)}
+              </div>
             </div>
           </div>
         </div>
@@ -51,7 +54,10 @@ class Plan extends Component {
     );
   }
   componentDidMount() {
-    Dragula([this.swimlanes.backlog.current,this.swimlanes.inProgress.current,this.swimlanes.complete.current]).on('drop', function (el,target,source,sibling) {
+    Dragula([this.swimlanes.backlog.current,
+      this.swimlanes.inProgress.current,
+      this.swimlanes.complete.current
+    ]).on('drop', function (el,target,source,sibling) {
     el.setAttribute("data-status",sibling.getAttribute("data-status")) 
     el.setAttribute("class",sibling.getAttribute("class")) 
   })
@@ -59,3 +65,6 @@ class Plan extends Component {
 }
 
 export default Plan;
+
+
+  

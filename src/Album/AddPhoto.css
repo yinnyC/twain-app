@@ -1,0 +1,10 @@
+.AddButton {
+	border-radius: 30px;
+}
+
+.preview {
+	display: flex;
+	justify-content: center;
+	min-height: 200px;
+	margin-bottom: 1em;
+}

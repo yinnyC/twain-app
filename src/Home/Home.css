@@ -1,22 +1,28 @@
 /*  src/Home/Home.css  */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 .Home {
 	position: relative;
 }
 .Home .jum {
-	background-image: url('https://i1.wp.com/abovewhispers.com/wp-content/uploads/2016/06/love-couple-beach-hd-wallpapers-cool-desktop-backgrounds-widescreen.jpg?w=1600');
+	background-image: url('https://i.pinimg.com/originals/71/a1/bf/71a1bf2e7bd9198115c2951c5c761e5c.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0;
 }
 
 .anniversary {
-	font-family: 'Courier New', Courier, monospace;
-	margin: 40px;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: rgb(80, 78, 78);
+	margin-top: 120px;
 }
 
 .buttons {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+}
+
+.AddButton {
+	border-radius: 30px;
 }

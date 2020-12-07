@@ -1,13 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 /*  src/Header.css  */
+.NavBar {
+	height: 125px;
+	background-color: rgb(224, 153, 153);
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+}
+
 .nav-link {
 	display: inline-block;
 	padding: 0.5em 1em;
-	color: rgba(255, 255, 255, 0.835);
+	color: rgba(169, 141, 141, 0.835);
 	font-weight: bold;
 	text-decoration: none;
 }
+.nav-link:hover {
+	color: rgb(211, 113, 113);
+}
 
 .nav-link-active {
-	color: #fff;
+	color: rgb(106, 76, 76);
 	border-bottom: 2px solid;
+}
+
+.Brand {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: 'Gloria Hallelujah', cursive;
 }

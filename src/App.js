@@ -17,10 +17,10 @@ function App() {
       <Route path="/home" component={Home} />
       <Route path="/chat" component={Chat} />
       <Route path="/album" component={Album} />
-      {/*<Route path="/plan" component={Plan} /> */} 
-      <Route path="/plan" render={()=>{
+      <Route path="/plan" component={Plan} /> 
+      {/* <Route path="/plan" render={()=>{
         return <Plan a="Hello" />
-      }}/>
+      }}/> */}
     </div> 
     </Router>
    
