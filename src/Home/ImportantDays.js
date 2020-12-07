@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
-import { Button,Modal,Form } from 'react-bootstrap';
+import { Button,Modal,Form,ListGroup } from 'react-bootstrap';
 import './Home.css';
+import './ImportantDays.css'
 // get fontawesome imports
-import { faImage } from "@fortawesome/free-solid-svg-icons";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const URL = process.env.REACT_APP_APIURL
 
-function ChangePhoto() {
+function ImportantDays(){
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -47,30 +48,39 @@ function ChangePhoto() {
 
   return (
     <>
-      <Button variant="secondary" className="AddButton" size="lg" onClick={handleShow}><FontAwesomeIcon icon={faImage} /></Button>
+      <Button variant="secondary" className="AddButton" size="lg" onClick={handleShow}><FontAwesomeIcon icon={faCalendar} /></Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Change Cover Photo</Modal.Title>
+          <Modal.Title>Important Days</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form>
-          <Form.Group>
-          <Form.Control onChange={handleChange}  name="url" value={input.url} type="text" placeholder="Paste your url" />
-          </Form.Group>
-        </Form>
+        <ListGroup variant="flush">
+          <ListGroup.Item><h6>Our First Day</h6> <p>02 Aug, 2019</p></ListGroup.Item>
+          <ListGroup.Item><h6>Jane's Bday</h6> <p>02 Oct, 1995</p></ListGroup.Item>
+          <ListGroup.Item><h6>John's Bday</h6> <p>02 Oct, 1992</p></ListGroup.Item>
+        </ListGroup>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="AddImportantDays">
+          <Form className="ImportantDaysForm">
+            <Form.Group>
+            <Form.Label>Title</Form.Label>
+            <Form.Control onChange={handleChange}  name="title" value={input.url} type="text"  />
+            <Form.Label>Date</Form.Label>
+            <Form.Control onChange={handleChange}  name="date" value={input.url} type="date"/>
+            </Form.Group>
+          </Form>
+          <div className="Buttons">
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button className="Btn" variant="primary" onClick={handleClick}>
+          <Button className="aBtn" variant="primary" onClick={handleClick}>
             Confirm
           </Button>
+          </div>
         </Modal.Footer>
       </Modal>
     </>
   );
 }
 
-
-export default ChangePhoto;
+export default ImportantDays;

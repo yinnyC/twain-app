@@ -1,0 +1,16 @@
+.AddImportantDays {
+	display: flex;
+	flex-direction: column;
+}
+
+.ImportantDaysForm {
+	margin: 10px;
+	width: 90%;
+}
+
+.Buttons {
+	margin-left: auto;
+}
+.aBtn {
+	margin-left: 5px;
+}

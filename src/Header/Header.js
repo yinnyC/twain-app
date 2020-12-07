@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
-import { Navbar,Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
 import './Header.css';
 
