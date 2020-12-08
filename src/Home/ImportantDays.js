@@ -55,9 +55,33 @@ function ImportantDays(){
         </Modal.Header>
         <Modal.Body>
         <ListGroup variant="flush">
-          <ListGroup.Item><h6>Our First Day</h6> <p>02 Aug, 2019</p></ListGroup.Item>
-          <ListGroup.Item><h6>Jane's Bday</h6> <p>02 Oct, 1995</p></ListGroup.Item>
-          <ListGroup.Item><h6>John's Bday</h6> <p>02 Oct, 1992</p></ListGroup.Item>
+          <ListGroup.Item  className="DateEntry col-md-12">
+            <div className="DateDetails">
+              <h6>Our First Day</h6> 
+              <p>02 Aug, 2019</p>
+            </div>
+            <div className="ButtonsGroup">
+              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
+            </div>
+            </ListGroup.Item>
+            <ListGroup.Item  className="DateEntry col-md-12">
+            <div className="DateDetails">
+              <h6>Jane's Bday</h6> 
+              <p>02 Oct, 1995</p>
+            </div>
+            <div className="ButtonsGroup">
+              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
+            </div>
+            </ListGroup.Item>
+            <ListGroup.Item  className="DateEntry col-md-12">
+            <div className="DateDetails">
+              <h6>John's Bday</h6> 
+              <p>02 Oct, 1992</p>
+            </div>
+            <div className="ButtonsGroup">
+              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
+            </div>
+            </ListGroup.Item>
         </ListGroup>
         </Modal.Body>
         <Modal.Footer className="AddImportantDays">

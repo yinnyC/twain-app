@@ -14,3 +14,13 @@
 .aBtn {
 	margin-left: 5px;
 }
+
+.DateEntry {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.ButtonsGroup {
+	margin-top: 1em;
+}

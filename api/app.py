@@ -1,5 +1,7 @@
 from flask_cors import CORS
 from flask import Flask, request, jsonify
+import os
+from dotenv import load_dotenv
 import json
 import pymongo
 from bson import objectid
@@ -16,9 +18,10 @@ class JSONEncoder(json.JSONEncoder):
 ############################################################
 # SETUP
 ############################################################
-
-client = pymongo.MongoClient(
-    "mongodb+srv://yinnyC:pumpkin@cluster0.nqcaa.mongodb.net/twain?retryWrites=true&w=majority")
+load_dotenv()  # Get the key from the '.env' file
+DB_KEY = os.getenv('DB_KEY')
+print(DB_KEY)
+client = pymongo.MongoClient(DB_KEY)
 db = client.twain
 album_collection = db.album
 

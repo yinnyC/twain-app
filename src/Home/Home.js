@@ -8,10 +8,10 @@ import './Home.css';
 
 function Home() { 
   return (
-    <div className="Home col-md-12 ml-auto mr-auto">
+    <div className="Home ml-auto mr-auto col-md-12">
       <Jumbotron className="min-vh-100 jum">
         <div className="anniversary">
-        <h4>Our First Day</h4>
+        <h2>Our First Day</h2>
         <p>486 days since</p>
         </div>
         <div className="buttons">
