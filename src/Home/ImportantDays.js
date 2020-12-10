@@ -12,7 +12,8 @@ function ImportantDays(){
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [input,setInput] = useState({
-    url:''
+    title:'',
+    date:''
   })
   function handleChange(e){
     const {name,value} = e.target;
@@ -33,9 +34,8 @@ function ImportantDays(){
       },
       body: JSON.stringify(input)
     }
-    if(input.url){
-      console.log(input.url)
-      fetch(URL + '/updateCover',options)
+    if(input.title && input.date){
+      fetch(URL + '/add_important_day',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{
@@ -88,9 +88,9 @@ function ImportantDays(){
           <Form className="ImportantDaysForm">
             <Form.Group>
             <Form.Label>Title</Form.Label>
-            <Form.Control onChange={handleChange}  name="title" value={input.url} type="text"  />
+            <Form.Control onChange={handleChange}  name="title" value={input.title} type="text"  />
             <Form.Label>Date</Form.Label>
-            <Form.Control onChange={handleChange}  name="date" value={input.url} type="date"/>
+            <Form.Control onChange={handleChange}  name="date" value={input.date} type="date"/>
             </Form.Group>
           </Form>
           <div className="Buttons">
