@@ -23,7 +23,11 @@ function ChangePhoto() {
       }
     })
   }
+  function refreshPage() {
+    window.location.reload(false);
+  }
   function handleClick(e){
+    setShow(false)
     e.preventDefault();
     const options = {
       method: "POST",
@@ -34,12 +38,13 @@ function ChangePhoto() {
     }
     if(input.url){
       console.log(input.url)
-      fetch(URL + '/updateCover',options)
+      fetch(URL + '/api/updateCover',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{
         console.log(err)
       })
+      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }

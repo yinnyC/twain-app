@@ -84,10 +84,17 @@ def getAlbum():
     cursor = album_collection.find({})
     items = []
     for doucument in cursor:
-        print(type(str(doucument["_id"])))
         items.append({"_id": str(doucument["_id"]), "title": doucument["title"],
                       "url": doucument["url"], "timestamp": doucument["timestamp"]})
     items.sort(key=lambda x: x['timestamp'], reverse=True)
+    return jsonify(data=items)
+
+
+@app.route("/api/getCover", methods=['GET'])
+def getCover():
+    cursor = cover_collection.find_one({'name': 'cover'})
+    items = {"_id": str(cursor["_id"]), "name": cursor["name"],
+             "url": cursor["url"]}
     return jsonify(data=items)
 
 
