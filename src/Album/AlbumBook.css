@@ -6,9 +6,11 @@
 }
 .AlbumBook-Title {
 	text-align: left;
+	text-shadow: 1px 1px #c46060;
 }
 
 .AlbumBook-Detail {
+	text-shadow: 1px 1px #c46060;
 	text-align: right;
 	position: absolute;
 	right: 1em;
