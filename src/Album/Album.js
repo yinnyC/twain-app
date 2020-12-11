@@ -33,15 +33,7 @@ function Album() {
       timestamp={timestamp}/>
     )
   })
-  // const albumbooks = data.map(({title,url,date})=>{
-  //   return(
-  //     <AlbumBook 
-  //     key={title}
-  //     title={title}
-  //     url={url}
-  //     date={date}/>
-  //   )
-  // })
+
   return (
     <div className="Album">
       <div className="col-md-11 mr-auto ml-auto">

@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import { Button,Modal,Form,ListGroup } from 'react-bootstrap';
 import './Home.css';
-import './ImportantDays.css'
+import DateDetails from './DateDetails';
+import './ImportantDays.css';
 // get fontawesome imports
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +12,33 @@ function ImportantDays(){
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [date,setDate] = useState([])
+  const getDates = ()=>{
+    fetch(URL+'/api/get_Important_day')
+    .then(response => {
+      return response.json();
+    }).then(date =>{
+      console.log(date);
+      setDate(date.data);
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
+
+  useEffect(()=>{
+    getDates();
+  },[]) 
+  const dateList = date.map(({_id,title,date,timestamp})=>{
+    
+    return(
+      <DateDetails 
+      key={_id}
+      _id = {_id}
+      title={title}
+      date={date}
+      timestamp={timestamp}/>
+    )
+  })
   const [input,setInput] = useState({
     title:'',
     date:''
@@ -25,6 +53,9 @@ function ImportantDays(){
       }
     })
   }
+  function refreshPage() {
+    window.location.reload(false);
+  }
   function handleClick(e){
     e.preventDefault();
     const options = {
@@ -35,12 +66,13 @@ function ImportantDays(){
       body: JSON.stringify(input)
     }
     if(input.title && input.date){
-      fetch(URL + '/add_important_day',options)
+      fetch(URL + '/api/add_important_day',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{
         console.log(err)
       })
+      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }
@@ -55,33 +87,7 @@ function ImportantDays(){
         </Modal.Header>
         <Modal.Body>
         <ListGroup variant="flush">
-          <ListGroup.Item  className="DateEntry col-md-12">
-            <div className="DateDetails">
-              <h6>Our First Day</h6> 
-              <p>02 Aug, 2019</p>
-            </div>
-            <div className="ButtonsGroup">
-              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
-            </div>
-            </ListGroup.Item>
-            <ListGroup.Item  className="DateEntry col-md-12">
-            <div className="DateDetails">
-              <h6>Jane's Bday</h6> 
-              <p>02 Oct, 1995</p>
-            </div>
-            <div className="ButtonsGroup">
-              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
-            </div>
-            </ListGroup.Item>
-            <ListGroup.Item  className="DateEntry col-md-12">
-            <div className="DateDetails">
-              <h6>John's Bday</h6> 
-              <p>02 Oct, 1992</p>
-            </div>
-            <div className="ButtonsGroup">
-              <Button className="aBtn" variant="danger" size="sm">Delete</Button>
-            </div>
-            </ListGroup.Item>
+          {dateList}
         </ListGroup>
         </Modal.Body>
         <Modal.Footer className="AddImportantDays">

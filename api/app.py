@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import json
 import pymongo
 from bson import objectid
+from bson.objectid import ObjectId
 import time
 
 
@@ -79,6 +80,17 @@ def add_important_day():
     return jsonify(data="create day response")
 
 
+@app.route("/api/delete_important_day", methods=["POST"])
+def delete_important_day():
+    #print(request.json, flush=True)
+    obj = request.json
+    if obj["title"] != 'Anniversary':
+        day_collection.delete_one({'_id': ObjectId(obj["_id"])})
+        return jsonify(data="delete response")
+    else:
+        return jsonify(data="We donot delete that")
+
+
 @app.route("/api/getAlbum", methods=['GET'])
 def getAlbum():
     cursor = album_collection.find({})
@@ -95,6 +107,24 @@ def getCover():
     cursor = cover_collection.find_one({'name': 'cover'})
     items = {"_id": str(cursor["_id"]), "name": cursor["name"],
              "url": cursor["url"]}
+    return jsonify(data=items)
+
+
+@app.route("/api/get_Important_day", methods=['GET'])
+def get_Important_day():
+    cursor = day_collection.find({})
+    items = []
+    for doucument in cursor:
+        items.append({"_id": str(doucument["_id"]), "title": doucument["title"],
+                      "date": doucument["date"], "timestamp": doucument["timestamp"]})
+    return jsonify(data=items)
+
+
+@app.route("/api/get_anniversary", methods=['GET'])
+def get_anniversary():
+    cursor = day_collection.find_one({'title': 'Anniversary'})
+    items = {"_id": str(cursor["_id"]), "title": cursor["title"],
+             "date": cursor["date"], "timestamp": cursor["timestamp"]}
     return jsonify(data=items)
 
 

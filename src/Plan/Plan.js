@@ -53,18 +53,27 @@ class Plan extends Component {
       </div>
     );
   }
+
   componentDidMount() {
     Dragula([this.swimlanes.backlog.current,
       this.swimlanes.inProgress.current,
       this.swimlanes.complete.current
     ]).on('drop', function (el,target,source,sibling) {
-    el.setAttribute("data-status",sibling.getAttribute("data-status")) 
-    el.setAttribute("class",sibling.getAttribute("class")) 
+      // console.log("el",el) // The Card that was moved
+      // console.log("sibling",sibling) // The other cards in the target container
+      // console.log("target",target) // The target container
+      // console.log("source",source)  // where "el" was from 
+      el.setAttribute("data-status",sibling.getAttribute("data-status")) 
+      el.setAttribute("class",sibling.getAttribute("class")) 
+      // sibling will return nothing if I drop the card in the very bottom of the countainer
   })
   }
+
 }
+
 
 export default Plan;
 
+ 
 
-  
+
