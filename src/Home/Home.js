@@ -10,7 +10,7 @@ const URL = process.env.REACT_APP_APIURL
 function Home() { 
   const [anniversary,setAnniversary] = useState([])
   const get_anniversary = ()=>{
-    fetch(URL+'/api/get_anniversary')
+    fetch(URL+'/get_anniversary')
     .then(response => {
       return response.json();
     }).then(anniversary =>{
@@ -22,7 +22,7 @@ function Home() {
   }
   const [cover,setCover] = useState([])
   const getCover = ()=>{
-    fetch(URL+'/api/getCover')
+    fetch(URL+'/getCover')
     .then(response => {
       return response.json();
     }).then(cover =>{

@@ -14,7 +14,7 @@ function ImportantDays(){
   const handleShow = () => setShow(true);
   const [date,setDate] = useState([])
   const getDates = ()=>{
-    fetch(URL+'/api/get_Important_day')
+    fetch(URL+'/get_Important_day')
     .then(response => {
       return response.json();
     }).then(date =>{
@@ -66,7 +66,7 @@ function ImportantDays(){
       body: JSON.stringify(input)
     }
     if(input.title && input.date){
-      fetch(URL + '/api/add_important_day',options)
+      fetch(URL + '/add_important_day',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{

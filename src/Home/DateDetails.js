@@ -20,7 +20,7 @@ function DateDetails(props) {
     }
     if(props){
       console.log(URL)
-      fetch(URL + '/api/delete_important_day',options)
+      fetch(URL + '/delete_important_day',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{

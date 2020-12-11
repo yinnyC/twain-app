@@ -47,7 +47,7 @@ function AddPhoto() {
     }
     if(input.title && input.url){
       console.log(URL)
-      fetch(URL + '/api/create',options)
+      fetch(URL + '/create',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{

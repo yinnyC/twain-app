@@ -38,7 +38,7 @@ function ChangePhoto() {
     }
     if(input.url){
       console.log(input.url)
-      fetch(URL + '/api/updateCover',options)
+      fetch(URL + '/updateCover',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{

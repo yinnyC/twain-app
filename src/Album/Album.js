@@ -9,7 +9,7 @@ const URL = process.env.REACT_APP_APIURL
 function Album() {
   const [photos,setPhotos] = useState([])
   const getPhotos = ()=>{
-    fetch(URL+'/api/getAlbum')
+    fetch(URL+'/getAlbum')
     .then(response => {
       return response.json();
     }).then(photos =>{
