@@ -75,7 +75,6 @@ def add_important_day():
     time_object = time.strptime(obj['date'], '%Y-%m-%d')
     epoch_timestamp = time.mktime(time_object)
     obj['timestamp'] = epoch_timestamp
-    print(epoch_timestamp)
     day_collection.insert_one(request.json)
     return jsonify(data="create day response")
 
