@@ -5,9 +5,6 @@ const URL = process.env.REACT_APP_APIURL
 
 function DateDetails(props) { 
   const {title,date} = props
-  function refreshPage() {
-    window.location.reload(false);
-  }
   function handleDelete(e){
     e.preventDefault();
     console.log(props)
@@ -26,7 +23,6 @@ function DateDetails(props) {
       }).catch(err=>{
         console.log(err)
       })
-      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }

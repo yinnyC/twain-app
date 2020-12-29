@@ -13,7 +13,6 @@ function Album() {
     .then(response => {
       return response.json();
     }).then(photos =>{
-      console.log(photos);
       setPhotos(photos.data);
     }).catch(err=>{
       console.log(err)

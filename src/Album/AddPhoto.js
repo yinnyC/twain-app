@@ -31,13 +31,9 @@ function AddPhoto() {
       }
     })
   }
-  function refreshPage() {
-    window.location.reload(false);
-  }
   function handleClick(e){
     setShow(false)
     e.preventDefault();
-    console.log(input)
     const options = {
       method: "POST",
       headers: {
@@ -46,14 +42,13 @@ function AddPhoto() {
       body: JSON.stringify(input)
     }
     if(input.title && input.url){
-      console.log(URL)
-      fetch(URL + '/create',options)
+      console.log(input.url)
+      fetch(URL + '/createPhoto',options)
       .then(response =>{
         return response.json()
       }).catch(err=>{
         console.log(err)
       })
-      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }

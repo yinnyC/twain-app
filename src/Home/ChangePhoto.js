@@ -44,7 +44,6 @@ function ChangePhoto() {
       }).catch(err=>{
         console.log(err)
       })
-      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }

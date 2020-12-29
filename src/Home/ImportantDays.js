@@ -18,7 +18,6 @@ function ImportantDays(){
     .then(response => {
       return response.json();
     }).then(date =>{
-      console.log(date);
       setDate(date.data);
     }).catch(err=>{
       console.log(err)
@@ -72,7 +71,6 @@ function ImportantDays(){
       }).catch(err=>{
         console.log(err)
       })
-      refreshPage()
     }else{
       console.log("The form is not valid to be sent")
     }

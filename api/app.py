@@ -40,7 +40,7 @@ CORS(app, resources=r'/api/*')
 ############################################################
 
 
-@app.route("/api/create", methods=["POST"])
+@app.route("/api/createPhoto", methods=["POST"])
 def createPhoto():
     #print(request.json, flush=True)
     obj = request.json
@@ -49,7 +49,6 @@ def createPhoto():
     album_collection.insert_one(obj)
     print(obj)
     return jsonify(data="create response")
-
 
 @app.route("/api/updateCover", methods=["POST"])
 def updateCover():
@@ -106,7 +105,7 @@ def getCover():
     cursor = cover_collection.find_one({'name': 'cover'})
     items = {"_id": str(cursor["_id"]), "name": cursor["name"],
              "url": cursor["url"]}
-    return jsonify(data=items)
+    return jsonify(data = cursor["url"])
 
 
 @app.route("/api/get_Important_day", methods=['GET'])

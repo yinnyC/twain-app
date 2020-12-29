@@ -14,7 +14,6 @@ function Home() {
     .then(response => {
       return response.json();
     }).then(anniversary =>{
-      console.log(anniversary);
       setAnniversary(anniversary.data);
     }).catch(err=>{
       console.log(err)
@@ -26,8 +25,7 @@ function Home() {
     .then(response => {
       return response.json();
     }).then(cover =>{
-      console.log(cover);
-      setCover(cover.data);
+      setCover(cover.data); 
     }).catch(err=>{
       console.log(err)
     })
@@ -36,9 +34,10 @@ function Home() {
     getCover();
     get_anniversary();
   },[]) 
+
   return (
     <div className="Home ml-auto mr-auto col-md-12">
-      <Jumbotron className="min-vh-100 jum"  style={{backgroundImage: `url(${cover.url}` }}>
+      <Jumbotron className="min-vh-100 jum"  style={{backgroundImage: `url(${cover})` }}>
         <div className="anniversary">
         <h2>Our First Day</h2>
         <p>{moment().diff(moment.unix(anniversary.timestamp), 'days') } days since</p>
