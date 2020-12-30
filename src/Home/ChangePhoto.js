@@ -6,7 +6,7 @@ import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const URL = process.env.REACT_APP_APIURL
 
-function ChangePhoto() {
+function ChangePhoto(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -22,9 +22,6 @@ function ChangePhoto() {
         [name]: value
       }
     })
-  }
-  function refreshPage() {
-    window.location.reload(false);
   }
   function handleClick(e){
     setShow(false)

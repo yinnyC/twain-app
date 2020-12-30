@@ -103,8 +103,6 @@ def getAlbum():
 @app.route("/api/getCover", methods=['GET'])
 def getCover():
     cursor = cover_collection.find_one({'name': 'cover'})
-    items = {"_id": str(cursor["_id"]), "name": cursor["name"],
-             "url": cursor["url"]}
     return jsonify(data = cursor["url"])
 
 

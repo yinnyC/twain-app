@@ -33,7 +33,7 @@ function Home() {
   useEffect(()=>{
     getCover();
     get_anniversary();
-  },[]) 
+  }) 
 
   return (
     <div className="Home ml-auto mr-auto col-md-12">
@@ -44,7 +44,7 @@ function Home() {
         
         </div>
         <div className="buttons">
-        <ChangePhoto />
+        <ChangePhoto/>
         <ImportantDays/>
       </div>
     </Jumbotron>

@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const URL = process.env.REACT_APP_APIURL
 
 function ImportantDays(){
+  
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,8 +27,9 @@ function ImportantDays(){
   }
 
   useEffect(()=>{
+    console.log("One lifecycle")
     getDates();
-  },[]) 
+  }); 
   const dateList = date.map(({_id,title,date,timestamp})=>{
     
     return(
@@ -51,9 +54,6 @@ function ImportantDays(){
         [name]: value
       }
     })
-  }
-  function refreshPage() {
-    window.location.reload(false);
   }
   function handleClick(e){
     e.preventDefault();
