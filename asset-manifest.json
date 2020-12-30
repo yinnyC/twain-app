@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/twain-app/static/css/main.5c7926ca.chunk.css",
-    "main.js": "/twain-app/static/js/main.e6172a2c.chunk.js",
-    "main.js.map": "/twain-app/static/js/main.e6172a2c.chunk.js.map",
+    "main.js": "/twain-app/static/js/main.3b36d891.chunk.js",
+    "main.js.map": "/twain-app/static/js/main.3b36d891.chunk.js.map",
     "runtime-main.js": "/twain-app/static/js/runtime-main.7841603e.js",
     "runtime-main.js.map": "/twain-app/static/js/runtime-main.7841603e.js.map",
     "static/css/2.a4524048.chunk.css": "/twain-app/static/css/2.a4524048.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.a4524048.chunk.css",
     "static/js/2.c1bcd5d2.chunk.js",
     "static/css/main.5c7926ca.chunk.css",
-    "static/js/main.e6172a2c.chunk.js"
+    "static/js/main.3b36d891.chunk.js"
   ]
 }
